@@ -1,10 +1,12 @@
+import 'package:provider/provider.dart';
 import './screens/registration_screen.dart';
-
+import './models/registration_model.dart';
 import './screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+      RegistarationProvider(model: RegistrationModel(), child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -12,8 +14,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: RegistrationWidget(),
+    return MaterialApp(
+      theme: ThemeData(
+        primaryColor: const Color(0xFFcb4352),
+      ),
+      home: const RegistrationWidget(),
     );
   }
 }
