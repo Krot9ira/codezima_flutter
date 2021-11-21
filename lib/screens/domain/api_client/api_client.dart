@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
+//add error handler
 class ApiClient {
   final _client = HttpClient();
   static const _host = 'http://localhost:3000/users';
@@ -28,5 +29,10 @@ class ApiClient {
         .then((v) => jsonDecode(v) as Map<String, dynamic>);
 
     return json['name'] as String;
+  }
+
+  // get password and email
+  Future<String> auth() async {
+    return 'temp';
   }
 }

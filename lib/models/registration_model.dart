@@ -30,6 +30,7 @@ class RegistrationModel extends ChangeNotifier {
         fullName: name, email: email, password: password);
     _isRegistrationProgress = false;
     notifyListeners();
+    Navigator.pop(context);
     return;
   }
 }

@@ -1,5 +1,5 @@
 import 'package:provider/provider.dart';
-import './screens/registration_screen.dart';
+import './screens/auth_screen.dart';
 import './models/registration_model.dart';
 import './screens/home_screen.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: const Color(0xFFcb4352),
       ),
-      home: const RegistrationWidget(),
+      home: const AuthWidget(),
     );
   }
 }
